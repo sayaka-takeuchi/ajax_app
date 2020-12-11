@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index 
     @posts = Post.all.order(id: "DESC")
+    @post_count = @posts.count
   end
 
   def create
